@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+    $('#percentBtn').click(function() {
+      var mealCost = parseInt($("#MealCost").val(), 10);
+      var percent = parseInt($("#percent").val(), 10);
+      var tip = (mealCost/100)*percent;
+      $('#tipbox').text("£" + tip);
+    })
+
+    });
+    function percentage(num, per) {
+      return (num/100)*per;
+    }
+    function getTip() {
+        var mealCost = document.getElementById('MealCost');
+        var percent = document.getElementById('percent');
+        var mealCostS = mealCost.innerHTML;
+        var percentS = percent.innerHTML;
+        var mealCostInt = Integer.parseInt(mealCostS);
+        var percentInt = Integer.parseInt(percentS);
+        colsole.log(percentage(mealCostInt, percentInt));
+
+    }
+</script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #box {
+            margin: auto;
+        width: 60%;
+        text-align: center;
+        border: 5px solid #708090;
+        padding: 10px;
+        margin-top: 15%;
+        }
+    </style>
+        <title>Tip Calculator</title>
+</head>
+<body>
+    <div id="container">
+        <div id="box">
+            <h1>Welcome to the Tip Calculator!</h1>
+            <h4>Follow it step by step to get results.</h4>
+            <p>Enter the total cost of the meal</p>
+            <input type="text" id="MealCost">
+            <p>Enter the percentage you want to tip</p>
+            <input type="text" id="percent">
+            <br>
+            <button id="percentBtn">Calculate</button> <br>
+            <h3 id="tipbox"></h3>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>
