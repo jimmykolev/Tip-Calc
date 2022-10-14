@@ -16,20 +16,7 @@
       var tip = (mealCost/100)*percent;
       $('#tipbox').text("£" + tip);
     })
-
     });
-    function percentage(num, per) {
-      return (num/100)*per;
-    }
-    function getTip() {
-        var mealCost = document.getElementById('MealCost');
-        var percent = document.getElementById('percent');
-        var mealCostS = mealCost.innerHTML;
-        var percentS = percent.innerHTML;
-        var mealCostInt = Integer.parseInt(mealCostS);
-        var percentInt = Integer.parseInt(percentS);
-        colsole.log(percentage(mealCostInt, percentInt));
-
     }
 </script>
     <style>
